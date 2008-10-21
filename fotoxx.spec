@@ -1,7 +1,7 @@
 Name:			fotoxx
 Version:		5.4.1
 Release:		%mkrel 1
-Summary:		Fotoxx is an editor of image files from a digital camera
+Summary:		Editor of image files from digital cameras
 License:		GPLv2
 Group:			Graphics
 Source:			%name-%version.tar.gz
@@ -12,14 +12,12 @@ Requires(post):		desktop-file-utils
 Requires(postun):	desktop-file-utils
 
 %description
-Edit image files from a digital camera. Includes color
-and contrast enhancement, red-eye removal, sharpen, 
-crop, rotate, noise removal, HDR (high dynamic range) 
-and panorama image compositing, thumbnail image browser, 
-tag editing and search.
+Edit image files from a digital camera. Includes color and contrast
+enhancement, red-eye removal, sharpen, crop, rotate, noise removal,
+HDR (high dynamic range) and panorama image compositing, thumbnail
+image browser, tag editing and search.
 
 %prep
-rm -rf %buildroot
 %setup -q -n %name
 
 # fix PREFIX in Makefile
@@ -29,6 +27,7 @@ sed -i -e "12 s:/usr/local:%buildroot%_exec_prefix:g" Makefile
 %make
 
 %install
+rm -rf %buildroot
 %makeinstall
 
 # menu icon
