@@ -5,7 +5,7 @@ Summary:		Editor of image files from digital cameras
 License:		GPLv2
 Group:			Graphics
 Source:			%name-%version.tar.gz
-URL:			http://kornelix.squarespace.com/
+URL:			http://kornelix.squarespace.com/fotoxx/
 BuildRoot:		%_tmppath/%name-%version-%release-buildroot
 BuildRequires:		libgtk+2.0-devel
 Requires(post):		desktop-file-utils
