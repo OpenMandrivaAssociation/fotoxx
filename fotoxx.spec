@@ -1,6 +1,6 @@
 Name:			fotoxx
 Version:		5.4.1
-Release:		%mkrel 1
+Release:		%mkrel 2
 Summary:		Editor of image files from digital cameras
 License:		GPLv2
 Group:			Graphics
@@ -24,11 +24,11 @@ image browser, tag editing and search.
 sed -i -e "12 s:/usr/local:%buildroot%_exec_prefix:g" Makefile
 
 %build
-%make
+%make PREFIX=%{_prefix}
 
 %install
 rm -rf %buildroot
-%makeinstall
+%__make PREFIX=%{buildroot}%{_prefix} install
 
 # menu icon
 mkdir -p %buildroot%_datadir/icons/hicolor/48x48/apps
