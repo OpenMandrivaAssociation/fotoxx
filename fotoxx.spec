@@ -20,9 +20,6 @@ image browser, tag editing and search.
 %prep
 %setup -q -n %name
 
-# fix PREFIX in Makefile
-sed -i -e "12 s:/usr/local:%buildroot%_exec_prefix:g" Makefile
-
 %build
 %make PREFIX=%{_prefix}
 
