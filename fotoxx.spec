@@ -10,6 +10,7 @@ BuildRoot:		%_tmppath/%name-%version-%release-buildroot
 BuildRequires:		libgtk+2.0-devel
 Requires(post):		desktop-file-utils
 Requires(postun):	desktop-file-utils
+Requires:		exiv2
 
 %description
 Edit image files from a digital camera. Includes color and contrast
