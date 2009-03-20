@@ -1,5 +1,5 @@
 Name:			fotoxx
-Version:		5.8
+Version:		6.2
 Release:		%mkrel 1
 Summary:		Editor of image files from digital cameras
 License:		GPLv2
@@ -8,9 +8,14 @@ Source:			%name-%version.tar.gz
 URL:			http://kornelix.squarespace.com/fotoxx/
 BuildRoot:		%_tmppath/%name-%version-%release-buildroot
 BuildRequires:		libgtk+2.0-devel
+BuildRequires:		freeimage-devel
+BuildRequires:		ufraw
+BuildRequires:		perl-Image-ExifTool
 Requires(post):		desktop-file-utils
 Requires(postun):	desktop-file-utils
 Requires:		exiv2
+Requires:		ufraw
+Requires:		perl-Image-ExifTool
 
 %description
 Edit image files from a digital camera. Includes color and contrast
