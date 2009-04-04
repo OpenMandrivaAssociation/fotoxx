@@ -1,5 +1,5 @@
 Name:			fotoxx
-Version:		6.2
+Version:		6.4.1
 Release:		%mkrel 1
 Summary:		Editor of image files from digital cameras
 License:		GPLv2
@@ -24,7 +24,7 @@ HDR (high dynamic range) and panorama image compositing, thumbnail
 image browser, tag editing and search.
 
 %prep
-%setup -q -n %name
+%setup -q
 
 %build
 %make PREFIX=%{_prefix}
