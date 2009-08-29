@@ -1,8 +1,8 @@
 Name:			fotoxx
-Version:		7.7
+Version:		8.2.2
 Release:		%mkrel 1
 Summary:		Editor of image files from digital cameras
-License:		GPLv2
+License:		GPLv3
 Group:			Graphics
 Source:			http://kornelix.squarespace.com/storage/downloads/%name-%version.tar.gz
 URL:			http://kornelix.squarespace.com/fotoxx/
@@ -76,4 +76,5 @@ rm -rf %buildroot
 %_datadir/%name
 %_datadir/applications/%name.desktop
 %_datadir/icons/hicolor/48x48/apps/%name.png
+%{_mandir}/man1/fotoxx.1*
 
