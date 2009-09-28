@@ -1,5 +1,5 @@
 Name:			fotoxx
-Version:		8.4.1
+Version:		8.4.3
 Release:		%mkrel 1
 Summary:		Editor of image files from digital cameras
 License:		GPLv3
