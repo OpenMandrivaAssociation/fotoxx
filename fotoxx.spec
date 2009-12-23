@@ -1,10 +1,11 @@
 Name:			fotoxx
 Version:		9.0
-Release:		%mkrel 1
+Release:		%mkrel 2
 Summary:		Editor of image files from digital cameras
 License:		GPLv3
 Group:			Graphics
 Source:			http://kornelix.squarespace.com/storage/downloads/%name-%version.tar.gz
+Patch0:			fotoxx-9.0-disable-desktop-file-autocreation.patch
 URL:			http://kornelix.squarespace.com/fotoxx/
 BuildRoot:		%_tmppath/%name-%version-%release-buildroot
 BuildRequires:		libgtk+2.0-devel
@@ -25,6 +26,7 @@ image browser, tag editing and search.
 
 %prep
 %setup -q
+%patch0 -p1 -b .desktopfile
 
 %build
 %make PREFIX=%{_prefix}
