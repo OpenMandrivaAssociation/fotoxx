@@ -1,17 +1,17 @@
 Name:			fotoxx
-Version:		9.7
+Version:		9.8
 Release:		%mkrel 1
 Summary:		Editor of image files from digital cameras
 License:		GPLv3
 Group:			Graphics
 Source:			http://kornelix.squarespace.com/storage/downloads/%{name}-%{version}.tar.gz
-Patch0:			fotoxx-9.7-link.patch
+Patch0:			fotoxx-9.8-link.patch
 URL:			http://kornelix.squarespace.com/fotoxx/
 BuildRoot:		%_tmppath/%name-%version-%release-buildroot
 BuildRequires:		libgtk+2.0-devel
-BuildRequires:		freeimage-devel
 BuildRequires:		ufraw
 BuildRequires:		perl-Image-ExifTool
+BuildRequires:		tiff-devel
 Requires(post):		desktop-file-utils
 Requires(postun):	desktop-file-utils
 Requires:		exiv2
