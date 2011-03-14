@@ -1,11 +1,10 @@
 Name:			fotoxx
-Version:		10.12
+Version:		11.03.1
 Release:		%mkrel 1
 Summary:		Editor of image files from digital cameras
 License:		GPLv3
 Group:			Graphics
 Source:			http://kornelix.squarespace.com/storage/downloads/%{name}-%{version}.tar.gz
-Patch0:			fotoxx-10.2-link.patch
 URL:			http://kornelix.squarespace.com/fotoxx/
 BuildRoot:		%_tmppath/%name-%version-%release-buildroot
 BuildRequires:		libgtk+2.0-devel
@@ -26,10 +25,9 @@ image browser, tag editing and search.
 
 %prep
 %setup -q
-%patch0 -p0
 
 %build
-%make PREFIX=%{_prefix} CXXFLAGS="%optflags" LDFLAGS="%ldflags"
+%make
 
 %install
 rm -rf %buildroot
