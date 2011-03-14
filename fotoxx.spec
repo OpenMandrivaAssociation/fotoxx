@@ -11,6 +11,7 @@ BuildRequires:		libgtk+2.0-devel
 BuildRequires:		ufraw
 BuildRequires:		perl-Image-ExifTool
 BuildRequires:		tiff-devel
+BuildRequires:		xdg-utils
 Requires(post):		desktop-file-utils
 Requires(postun):	desktop-file-utils
 Requires:		exiv2
