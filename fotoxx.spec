@@ -1,10 +1,11 @@
 Name:			fotoxx
-Version:		11.03.1
+Version:		11.04
 Release:		%mkrel 1
 Summary:		Editor of image files from digital cameras
 License:		GPLv3
 Group:			Graphics
 Source:			http://kornelix.squarespace.com/storage/downloads/%{name}-%{version}.tar.gz
+Patch0:			fotoxx-11.04-link.patch
 URL:			http://kornelix.squarespace.com/fotoxx/
 BuildRoot:		%_tmppath/%name-%version-%release-buildroot
 BuildRequires:		libgtk+2.0-devel
@@ -12,8 +13,6 @@ BuildRequires:		ufraw
 BuildRequires:		perl-Image-ExifTool
 BuildRequires:		tiff-devel
 BuildRequires:		xdg-utils
-Requires(post):		desktop-file-utils
-Requires(postun):	desktop-file-utils
 Requires:		exiv2
 Requires:		ufraw
 Requires:		perl-Image-ExifTool
@@ -26,9 +25,10 @@ image browser, tag editing and search.
 
 %prep
 %setup -q
+%patch0 -p0
 
 %build
-%make
+%make CXXFLAGS="%optflags" LDFLAGS="%ldflags" PREFIX=%_prefix
 
 %install
 rm -rf %buildroot
