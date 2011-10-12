@@ -1,5 +1,5 @@
 Name:			fotoxx
-Version:		11.06.2
+Version:		11.10
 Release:		%mkrel 1
 Summary:		Editor of image files from digital cameras
 License:		GPLv3
