@@ -1,6 +1,6 @@
 Name:			fotoxx
-Version:		11.11.1
-Release:		%mkrel 1
+Version:		11.12.2
+Release:		1
 Summary:		Editor of image files from digital cameras
 License:		GPLv3
 Group:			Graphics
@@ -14,7 +14,6 @@ BuildRequires:		xdg-utils
 Requires:		exiv2
 Requires:		ufraw
 Requires:		perl-Image-ExifTool
-BuildRoot:		%_tmppath/%{name}-%{version}-%{release}-buildroot
 
 %description
 Edit image files from a digital camera. Includes color and contrast
@@ -29,7 +28,6 @@ image browser, tag editing and search.
 %make CXXFLAGS="%optflags" LDFLAGS="%ldflags" PREFIX=%_prefix
 
 %install
-rm -rf %{buildroot}
 %__make PREFIX=%{buildroot}%{_prefix} install
 
 # menu icon
@@ -53,23 +51,6 @@ Type=Application
 StartupNotify=true
 Categories=Graphics;X-MandrivaLinux-CrossDesktop;
 EOF
-
-%clean
-rm -rf %{buildroot}
-
-%if %mdkversion < 200900
-%post
-%update_desktop_database
-%update_icon_cache hicolor
-%update_menus
-%endif
-
-%if %mdkversion < 200900
-%postun
-%clean_desktop_database
-%clean_icon_cache hicolor
-%clean_menus
-%endif
 
 %files
 %defattr(-,root,root)
