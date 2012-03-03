@@ -1,5 +1,5 @@
 Name:			fotoxx
-Version:		12.02
+Version:		12.03
 Release:		1
 Summary:		Editor of image files from digital cameras
 License:		GPLv3
