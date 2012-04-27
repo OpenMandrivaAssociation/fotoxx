@@ -1,5 +1,5 @@
 Name:			fotoxx
-Version:		12.03
+Version:		12.05
 Release:		1
 Summary:		Editor of image files from digital cameras
 License:		GPLv3
@@ -11,6 +11,7 @@ BuildRequires:		ufraw
 BuildRequires:		perl-Image-ExifTool
 BuildRequires:		tiff-devel
 BuildRequires:		xdg-utils
+BuildRequires:		imagemagick
 Requires:		exiv2
 Requires:		ufraw
 Requires:		perl-Image-ExifTool
@@ -25,14 +26,16 @@ image browser, tag editing and search.
 %setup -q
 
 %build
-%make CXXFLAGS="%optflags" LDFLAGS="%ldflags" PREFIX=%_prefix
+%make CXXFLAGS="%{optflags}" LDFLAGS="%{ldflags}" PREFIX=%{_prefix}
 
 %install
 %__make PREFIX=%{buildroot}%{_prefix} install
 
 # menu icon
-mkdir -p %{buildroot}%{_datadir}/icons/hicolor/48x48/apps
-cp %{buildroot}%{_datadir}/%{name}/icons/%{name}.png %{buildroot}%{_datadir}/icons/hicolor/48x48/apps/%{name}.png
+for size in 16 24 32 48 64 128
+do
+%__install -D -m 644 %{buildroot}%{_datadir}/%{name}/icons/%{name}${size}.png %{buildroot}%{_iconsdir}/hicolor/${size}x${size}/apps/%{name}.png
+done
 
 # (tpg) drop upstream desktop file
 rm -rf %{buildroot}%{_datadir}/applications/kornelix-fotoxx.desktop
@@ -41,6 +44,7 @@ rm -rf %{buildroot}%{_datadir}/applications/kornelix-fotoxx.desktop
 mkdir -p %{buildroot}%{_datadir}/applications
 cat << EOF > %{buildroot}%{_datadir}/applications/%{name}.desktop
 [Desktop Entry]
+Version=1.0
 Name=%{name}
 GenericName=Image Editor
 Comment=Edit image files from a digital camera
@@ -58,5 +62,5 @@ EOF
 %{_bindir}/%{name}
 %{_datadir}/%{name}
 %{_datadir}/applications/%{name}.desktop
-%{_datadir}/icons/hicolor/48x48/apps/%{name}.png
+%{_datadir}/icons/hicolor/*/apps/%{name}.png
 %{_mandir}/man1/fotoxx.1*
