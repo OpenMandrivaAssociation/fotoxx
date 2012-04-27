@@ -11,7 +11,6 @@ BuildRequires:		ufraw
 BuildRequires:		perl-Image-ExifTool
 BuildRequires:		tiff-devel
 BuildRequires:		xdg-utils
-BuildRequires:		imagemagick
 Requires:		exiv2
 Requires:		ufraw
 Requires:		perl-Image-ExifTool
