@@ -1,5 +1,5 @@
 Name:			fotoxx
-Version:		12.05
+Version:		12.07
 Release:		1
 Summary:		Editor of image files from digital cameras
 License:		GPLv3
@@ -56,7 +56,6 @@ Categories=Graphics;X-MandrivaLinux-CrossDesktop;
 EOF
 
 %files
-%defattr(-,root,root)
 %{_docdir}/%{name}
 %{_bindir}/%{name}
 %{_datadir}/%{name}
