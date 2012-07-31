@@ -1,5 +1,5 @@
 Name:			fotoxx
-Version:		12.07.1
+Version:		12.08
 Release:		1
 Summary:		Editor of image files from digital cameras
 License:		GPLv3
@@ -11,6 +11,7 @@ BuildRequires:		ufraw
 BuildRequires:		perl-Image-ExifTool
 BuildRequires:		tiff-devel
 BuildRequires:		xdg-utils
+BuildRequires:		imagemagick
 Requires:		exiv2
 Requires:		ufraw
 Requires:		perl-Image-ExifTool
@@ -31,9 +32,11 @@ image browser, tag editing and search.
 %__make PREFIX=%{buildroot}%{_prefix} install
 
 # menu icon
-for size in 16 24 32 48 64 128
+%__install -D -m 644 %{buildroot}%{_datadir}/%{name}/icons/%{name}.png %{buildroot}%{_iconsdir}/hicolor/64x64/apps/%{name}.png
+for size in 16 24 32 48
 do
-%__install -D -m 644 %{buildroot}%{_datadir}/%{name}/icons/%{name}${size}.png %{buildroot}%{_iconsdir}/hicolor/${size}x${size}/apps/%{name}.png
+%__install -d %{buildroot}%{_iconsdir}/hicolor/${size}x${size}/apps/
+convert -resize ${size}x${size} %{buildroot}%{_datadir}/%{name}/icons/%{name}.png %{buildroot}%{_iconsdir}/hicolor/${size}x${size}/apps/%{name}.png
 done
 
 # (tpg) drop upstream desktop file
