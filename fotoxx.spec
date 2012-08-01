@@ -58,6 +58,9 @@ StartupNotify=true
 Categories=Graphics;X-MandrivaLinux-CrossDesktop;
 EOF
 
+# drop ugly Russian translation until it will be fixed
+rm -f %{buildroot}%{_datadir}/%{name}/locales/%{name}-ru.po
+
 %files
 %{_docdir}/%{name}
 %{_bindir}/%{name}
