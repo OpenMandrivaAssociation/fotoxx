@@ -1,11 +1,11 @@
 Name:			fotoxx
-Version:		12.09.1
-Release:		1
+Version:		12.08
+Release:		2
 Summary:		Editor of image files from digital cameras
 License:		GPLv3
 Group:			Graphics
-Source0:		http://www.kornelix.com/uploads/1/3/0/3/13035936/%{name}-%{version}.tar.gz
-URL:			http://www.kornelix.com/fotoxx.html
+Source0:		http://kornelix.squarespace.com/storage/downloads/%{name}-%{version}.tar.gz
+URL:			http://kornelix.squarespace.com/fotoxx/
 BuildRequires:		pkgconfig(gtk+-3.0)
 BuildRequires:		ufraw
 BuildRequires:		perl-Image-ExifTool
