@@ -1,6 +1,6 @@
 Name:		fotoxx
-Version:	12.08
-Release:	4
+Version:	18.01.3
+Release:	1
 Summary:	Editor of image files from digital cameras
 License:	GPLv3
 Group:		Graphics
