@@ -14,6 +14,7 @@ BuildRequires:	xdg-utils
 BuildRequires:	imagemagick
 BuildRequires:  pkgconfig(lcms2)
 BuildRequires:  pkgconfig(libraw)
+BuildRequires:  pkgconfig(champlain-0.12)
 Requires:	exiv2
 Requires:	ufraw
 Requires:	perl-Image-ExifTool
