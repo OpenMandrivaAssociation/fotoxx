@@ -12,6 +12,8 @@ BuildRequires:	perl-Image-ExifTool
 BuildRequires:	tiff-devel
 BuildRequires:	xdg-utils
 BuildRequires:	imagemagick
+BuildRequires:  pkgconfig(lcms2)
+BuildRequires:  pkgconfig(libraw)
 Requires:	exiv2
 Requires:	ufraw
 Requires:	perl-Image-ExifTool
