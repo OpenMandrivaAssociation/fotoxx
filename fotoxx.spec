@@ -1,6 +1,6 @@
 Name:		fotoxx
-Version:	12.08
-Release:	4
+Version:	18.07
+Release:	1
 Summary:	Editor of image files from digital cameras
 License:	GPLv3
 Group:		Graphics
@@ -12,6 +12,9 @@ BuildRequires:	perl-Image-ExifTool
 BuildRequires:	tiff-devel
 BuildRequires:	xdg-utils
 BuildRequires:	imagemagick
+BuildRequires:  pkgconfig(lcms2)
+BuildRequires:  pkgconfig(libraw)
+BuildRequires:  pkgconfig(champlain-0.12)
 Requires:	exiv2
 Requires:	ufraw
 Requires:	perl-Image-ExifTool
@@ -67,4 +70,5 @@ rm -f %{buildroot}%{_datadir}/%{name}/locales/%{name}-ru.po
 %{_datadir}/%{name}
 %{_datadir}/applications/%{name}.desktop
 %{_datadir}/icons/hicolor/*/apps/%{name}.png
+%{_datadir}/appdata/%{name}.appdata.xml
 %{_mandir}/man1/fotoxx.1*
