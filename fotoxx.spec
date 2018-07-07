@@ -70,4 +70,5 @@ rm -f %{buildroot}%{_datadir}/%{name}/locales/%{name}-ru.po
 %{_datadir}/%{name}
 %{_datadir}/applications/%{name}.desktop
 %{_datadir}/icons/hicolor/*/apps/%{name}.png
+%{_datadir}/appdata/%{name}.appdata.xml
 %{_mandir}/man1/fotoxx.1*
