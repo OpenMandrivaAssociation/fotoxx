@@ -15,6 +15,7 @@ BuildRequires:	imagemagick
 BuildRequires:  pkgconfig(lcms2)
 BuildRequires:  pkgconfig(libraw)
 BuildRequires:  pkgconfig(champlain-0.12)
+BuildRequires:  pkgconfig(libjpeg)
 Requires:	exiv2
 Requires:	ufraw
 Requires:	perl-Image-ExifTool
