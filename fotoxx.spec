@@ -1,5 +1,5 @@
 Name:		fotoxx
-Version:	18.07
+Version:	19.0
 Release:	1
 Summary:	Editor of image files from digital cameras
 License:	GPLv3
@@ -15,6 +15,7 @@ BuildRequires:	imagemagick
 BuildRequires:  pkgconfig(lcms2)
 BuildRequires:  pkgconfig(libraw)
 BuildRequires:  pkgconfig(champlain-0.12)
+BuildRequires:  pkgconfig(libjpeg)
 Requires:	exiv2
 Requires:	ufraw
 Requires:	perl-Image-ExifTool
@@ -26,7 +27,7 @@ HDR (high dynamic range) and panorama image compositing, thumbnail
 image browser, tag editing and search.
 
 %prep
-%setup -q
+%setup -q -n %{name}
 
 %build
 %make CXXFLAGS="%{optflags}" LDFLAGS="%{ldflags}" PREFIX=%{_prefix}
