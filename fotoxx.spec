@@ -26,7 +26,7 @@ HDR (high dynamic range) and panorama image compositing, thumbnail
 image browser, tag editing and search.
 
 %prep
-%setup -q
+%setup -q -n %{name}
 
 %build
 %make CXXFLAGS="%{optflags}" LDFLAGS="%{ldflags}" PREFIX=%{_prefix}
