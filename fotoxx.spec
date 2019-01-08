@@ -1,5 +1,5 @@
 Name:		fotoxx
-Version:	18.07
+Version:	19.0
 Release:	1
 Summary:	Editor of image files from digital cameras
 License:	GPLv3
