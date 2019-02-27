@@ -1,5 +1,5 @@
 Name:		fotoxx
-Version:	19.4
+Version:	19.5
 Release:	1
 Summary:	Editor of image files from digital cameras
 License:	GPLv3
@@ -61,9 +61,6 @@ Type=Application
 StartupNotify=true
 Categories=Graphics;X-MandrivaLinux-CrossDesktop;
 EOF
-
-# drop ugly Russian translation until it will be fixed
-rm -f %{buildroot}%{_datadir}/%{name}/locales/%{name}-ru.po
 
 %files
 %{_docdir}/%{name}
