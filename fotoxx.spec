@@ -1,5 +1,5 @@
 Name:		fotoxx
-Version:	19.11
+Version:	19.12
 Release:	1
 Summary:	Editor of image files from digital cameras
 License:	GPLv3
@@ -30,10 +30,10 @@ image browser, tag editing and search.
 %setup -q -n %{name}
 
 %build
-%make CXXFLAGS="%{optflags}" LDFLAGS="%{ldflags}" PREFIX=%{_prefix}
+%make_build CXXFLAGS="%{optflags}" LDFLAGS="%{ldflags}" PREFIX=%{_prefix}
 
 %install
-make PREFIX=%{buildroot}%{_prefix} install
+%make_install PREFIX=%{buildroot}%{_prefix} install
 
 # menu icon
 install -D -m 644 %{buildroot}%{_datadir}/%{name}/icons/%{name}.png %{buildroot}%{_iconsdir}/hicolor/64x64/apps/%{name}.png
