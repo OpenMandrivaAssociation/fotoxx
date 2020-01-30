@@ -1,11 +1,11 @@
 Name:		fotoxx
-Version:	19.12
+Version:	20.05
 Release:	1
 Summary:	Editor of image files from digital cameras
 License:	GPLv3
 Group:		Graphics
-Source0:	http://kornelix.squarespace.com/storage/downloads/%{name}-%{version}.tar.gz
-URL:      https://kornelix.net/fotoxx/fotoxx.html
+Source0:	https://kornelix.net/downloads/downloads/fotoxx-%{version}.tar.gz
+URL:		https://kornelix.net/fotoxx/fotoxx.html
 BuildRequires:	pkgconfig(gtk+-3.0)
 BuildRequires:	ufraw
 BuildRequires:	perl-Image-ExifTool
@@ -33,7 +33,7 @@ image browser, tag editing and search.
 %make_build CXXFLAGS="%{optflags}" LDFLAGS="%{ldflags}" PREFIX=%{_prefix}
 
 %install
-%make_install PREFIX=%{buildroot}%{_prefix} install
+%make_install PREFIX=%{_prefix}
 
 # menu icon
 install -D -m 644 %{buildroot}%{_datadir}/%{name}/icons/%{name}.png %{buildroot}%{_iconsdir}/hicolor/64x64/apps/%{name}.png
