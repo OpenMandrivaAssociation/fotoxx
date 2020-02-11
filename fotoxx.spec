@@ -1,5 +1,5 @@
 Name:		fotoxx
-Version:	20.05
+Version:	20.06
 Release:	1
 Summary:	Editor of image files from digital cameras
 License:	GPLv3
@@ -16,6 +16,7 @@ BuildRequires:  pkgconfig(lcms2)
 BuildRequires:  pkgconfig(libraw)
 BuildRequires:  pkgconfig(champlain-0.12)
 BuildRequires:  pkgconfig(libjpeg)
+Requires: dcraw
 Requires:	exiv2
 Requires:	ufraw
 Requires:	perl-Image-ExifTool
