@@ -1,6 +1,6 @@
 Name:		fotoxx
 Version:	21.34
-Release:	1
+Release:	2
 Summary:	Editor of image files from digital cameras
 License:	GPLv3
 Group:		Graphics
@@ -31,6 +31,8 @@ image browser, tag editing and search.
 %setup -q -n %{name}
 
 %build
+export CC=clang
+export CXX=clang++
 %make_build CXXFLAGS="%{optflags}" LDFLAGS="%{ldflags}" PREFIX=%{_prefix}
 
 %install
