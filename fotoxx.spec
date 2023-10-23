@@ -1,5 +1,5 @@
 Name:		fotoxx
-Version:	23.70
+Version:	23.72
 Release:	1
 Summary:	Editor of image files from digital cameras
 License:	GPLv3
