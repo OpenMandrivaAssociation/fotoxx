@@ -4,7 +4,7 @@ Release:	1
 Summary:	Editor of image files from digital cameras
 License:	GPLv3
 Group:		Graphics
-Source0:	https://kornelix.net/downloads/downloads/fotocx-%{version}.tar.gz
+Source0:	https://kornelix.net/downloads/downloads/fotocx-%{version}-source.tar.gz
 URL:		https://kornelix.net/fotoxx/fotoxx.html
 BuildRequires:	pkgconfig(gtk+-3.0)
 BuildRequires:	ufraw
