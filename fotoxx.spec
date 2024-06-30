@@ -29,7 +29,7 @@ HDR (high dynamic range) and panorama image compositing, thumbnail
 image browser, tag editing and search.
 
 %prep
-%setup -q -n fotocx
+%autosetup -n fotocx -p1
 
 %build
 export CC=clang
