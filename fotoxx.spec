@@ -1,10 +1,10 @@
 Name:		fotoxx
-Version:	23.82
+Version:	24.40
 Release:	1
 Summary:	Editor of image files from digital cameras
 License:	GPLv3
 Group:		Graphics
-Source0:	https://kornelix.net/downloads/downloads/fotoxx-%{version}.tar.gz
+Source0:	https://kornelix.net/downloads/downloads/fotocx-%{version}.tar.gz
 URL:		https://kornelix.net/fotoxx/fotoxx.html
 BuildRequires:	pkgconfig(gtk+-3.0)
 BuildRequires:	ufraw
@@ -20,6 +20,7 @@ Requires: dcraw
 Requires:	exiv2
 Requires:	ufraw
 Requires:	perl-Image-ExifTool
+Provides: fotocx
 
 %description
 Edit image files from a digital camera. Includes color and contrast
@@ -28,7 +29,7 @@ HDR (high dynamic range) and panorama image compositing, thumbnail
 image browser, tag editing and search.
 
 %prep
-%setup -q -n %{name}
+%setup -q -n fotocx
 
 %build
 export CC=clang
