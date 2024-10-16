@@ -40,12 +40,12 @@ export CXX=clang++
 %make_install PREFIX=%{_prefix}
 
 # menu icon
-install -D -m 644 %{buildroot}%{_datadir}/%{name}/icons/%{name}.png %{buildroot}%{_iconsdir}/hicolor/64x64/apps/%{name}.png
-for size in 16 24 32 48
-do
-install -d %{buildroot}%{_iconsdir}/hicolor/${size}x${size}/apps/
-convert -resize ${size}x${size} %{buildroot}%{_datadir}/%{name}/icons/%{name}.png %{buildroot}%{_iconsdir}/hicolor/${size}x${size}/apps/%{name}.png
-done
+#install -D -m 644 %{buildroot}%{_datadir}/%{name}/icons/%{name}.png %{buildroot}%{_iconsdir}/hicolor/64x64/apps/%{name}.png
+#for size in 16 24 32 48
+#do
+#install -d %{buildroot}%{_iconsdir}/hicolor/${size}x${size}/apps/
+#convert -resize ${size}x${size} %{buildroot}%{_datadir}/%{name}/icons/%{name}.png %{buildroot}%{_iconsdir}/hicolor/${size}x${size}/apps/%{name}.png
+#done
 
 # (tpg) drop upstream desktop file
 rm -rf %{buildroot}%{_datadir}/applications/kornelix-fotoxx.desktop
