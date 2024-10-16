@@ -71,6 +71,6 @@ EOF
 %{_bindir}/%{name}
 %{_datadir}/%{name}
 %{_datadir}/applications/%{name}.desktop
-%{_datadir}/icons/hicolor/*/apps/%{name}.png
-%{_datadir}/metainfo/kornelix.fotoxx.metainfo.xml
-%{_mandir}/man1/fotoxx.1*
+#{_datadir}/icons/hicolor/*/apps/%{name}.png
+%{_datadir}/metainfo/kornelix.%{name}.metainfo.xml
+%{_mandir}/man1/%{name}.1*
