@@ -1,4 +1,4 @@
-Name:		fotoxx
+Name:		fotocx
 Version:	24.60
 Release:	1
 Summary:	Editor of image files from digital cameras
@@ -20,7 +20,7 @@ Requires: dcraw
 Requires:	exiv2
 Requires:	ufraw
 Requires:	perl-Image-ExifTool
-Provides: fotocx
+Provides: fotoxx
 
 %description
 Edit image files from a digital camera. Includes color and contrast
