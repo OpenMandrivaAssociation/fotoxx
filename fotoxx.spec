@@ -20,7 +20,8 @@ Requires: dcraw
 Requires:	exiv2
 Requires:	ufraw
 Requires:	perl-Image-ExifTool
-Provides: fotoxx
+Provides: fotocx
+%rename fotoxx
 
 %description
 Edit image files from a digital camera. Includes color and contrast
