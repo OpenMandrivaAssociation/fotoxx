@@ -1,11 +1,11 @@
 Name:		fotocx
-Version:	24.60
+Version:	24.70
 Release:	1
 Summary:	Editor of image files from digital cameras
 License:	GPLv3
 Group:		Graphics
 Source0:	https://kornelix.net/downloads/downloads/fotocx-%{version}-source.tar.gz
-URL:		https://kornelix.net/fotoxx/fotoxx.html
+URL:		https://kornelix.net/fotocx/fotocx.html
 BuildRequires:	pkgconfig(gtk+-3.0)
 BuildRequires:	ufraw
 BuildRequires:	perl-Image-ExifTool
