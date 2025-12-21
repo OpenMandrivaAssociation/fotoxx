@@ -6,6 +6,7 @@ License:	GPLv3
 Group:		Graphics
 Source0:	https://kornelix.net/downloads/downloads/fotocx-%{version}-source.tar.gz
 URL:		https://kornelix.net/fotocx/fotocx.html
+BuildRequires:	make
 BuildRequires:	pkgconfig(gtk+-3.0)
 BuildRequires:	ufraw
 BuildRequires:	perl-Image-ExifTool
