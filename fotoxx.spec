@@ -1,5 +1,5 @@
 Name:		fotocx
-Version:	26.3
+Version:	26.6.1
 Release:	1
 Summary:	Editor of image files from digital cameras
 License:	GPLv3
