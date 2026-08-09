@@ -19,6 +19,7 @@ BuildRequires:  pkgconfig(champlain-0.12)
 BuildRequires:  pkgconfig(libjpeg)
 BuildRequires:  pkgconfig(libhwy)
 BuildRequires:  pkgconfig(libjxl)
+BuildRequires:  pkgconfig(webkit2gtk-4.1)
 Requires: dcraw
 Requires:	exiv2
 Requires:	ufraw
